@@ -1,9 +1,9 @@
 // src/screens/PerfilScreen.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Edit, History, LogOut } from 'lucide-react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
 
@@ -11,14 +11,15 @@ const PerfilScreen = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const [user, setUser] = useState({ name: '', email: '' });
 
-  // ... (useEffect e handleLogout continuam os mesmos)
-  useEffect(() => {
-    const fetchUser = async () => {
-      const userData = await AsyncStorage.getItem('user_data');
-      if (userData) setUser(JSON.parse(userData));
-    };
-    fetchUser();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      const fetchUser = async () => {
+        const userData = await AsyncStorage.getItem('user_data');
+        if (userData) setUser(JSON.parse(userData));
+      };
+      fetchUser();
+    }, [])
+  );
 
   const handleLogout = async () => {
     await AsyncStorage.removeItem('user_token');
