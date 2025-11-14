@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Estação de recarga Shopping Beiramar",
+    "address": "Av. Gov. Irineu Bornhausen, 4800, Florianópolis, SC",
+    "coords": { "latitude": -27.5888, "longitude": -48.5433 },
+    "power": "50kW",
+    "vacancies": "4/6",
+    "price": 0.89,
+    "status": "Disponível"
+  },
+  {
+    "id": 2,
+    "name": "Estação de recarga Centro",
+    "address": "Av. Jorn. Rubens de Arruda Ramos, 2712, Florianópolis, SC",
+    "coords": { "latitude": -27.5905, "longitude": -48.5511 },
+    "power": "22kW",
+    "vacancies": "3/3",
+    "price": 1.44,
+    "status": "Ocupado"
+  },
+  {
+    "id": 3,
+    "name": "Estação de recarga UFSC",
+    "address": "R. Eng. Agronômico Andrei Cristian Ferreira, s/n, Florianópolis, SC",
+    "coords": { "latitude": -27.6009, "longitude": -48.5227 },
+    "power": "7kW",
+    "vacancies": "8/8",
+    "price": 0.75,
+    "status": "Disponível"
+  },
+  {
+    "id": 4,
+    "name": "Estação de recarga Lagoa",
+    "address": "Rod. Admar Gonzaga, 4720, Florianópolis, SC",
+    "coords": { "latitude": -27.5969, "longitude": -48.4958 },
+    "power": "150kW",
+    "vacancies": "1/2",
+    "price": 1.10,
+    "status": "Indisponível"
+  }
+]
